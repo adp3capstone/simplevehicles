@@ -5,7 +5,6 @@ public class Van extends Vehicle {
     private boolean hasSlidingDoor;
 
     public Van(Builder builder) {
-        super();
         super.make = builder.make;
         super.model = builder.model;
         super.color = builder.color;
@@ -26,17 +25,8 @@ public class Van extends Vehicle {
 
     @Override
     public String changeDirection(){
+
         return "The van's direction has been changed...";
-    }
-
-    public double getCargoCapacity() {
-
-        return cargoCapacity;
-    }
-
-    public boolean isHasSlidingDoor() {
-
-        return hasSlidingDoor;
     }
 
     public static class Builder {
