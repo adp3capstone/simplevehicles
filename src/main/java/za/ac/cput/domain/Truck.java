@@ -13,6 +13,14 @@ public class Truck extends Vehicle{
         truckTrailer = builder.truckTrailer;
     }
 
+    public double getLoadWeightLimit() {
+        return loadWeightLimit;
+    }
+
+    public boolean getTruckTrailer() {
+        return truckTrailer;
+    }
+
     @Override
     public String drive(){
         return "The truck is driving...";
