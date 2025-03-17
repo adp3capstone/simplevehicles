@@ -25,7 +25,6 @@ public class Van extends Vehicle {
 
     @Override
     public String changeDirection(){
-
         return "The van's direction has been changed...";
     }
 
