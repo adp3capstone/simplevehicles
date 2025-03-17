@@ -1,10 +1,10 @@
 package za.ac.cput.domain;
 
 public class Vehicle {
-    private String make;
-    private String model;
-    private String color;
-    private int wheels;
+    protected String make;
+    protected String model;
+    protected String color;
+    protected int wheels;
 
     String drive(){
         return null;
