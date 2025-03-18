@@ -1,39 +1,36 @@
 package za.ac.cput.domain;
 
-
-
-
-
-
-public class Bus extends Vehicle{
+public class Bus extends Vehicle {
     private int capacity;
     private int doorCount;
 
-    public Bus(Builder builder){
+    private Bus(){}
+
+    private Bus(Builder builder) {
         super.make = builder.make;
         super.model = builder.model;
         super.color = builder.color;
         super.wheels = builder.wheels;
-        capacity = builder.capacity;
-        doorCount = builder.doorCount;
+        this.capacity = builder.capacity;
+        this.doorCount = builder.doorCount;
     }
 
     @Override
-    public String drive(){
+    public String drive() {
         return "Bus is driving...";
     }
 
     @Override
-    public String useBreak(){
+    public String useBreak() {
         return "Bus is stopping...";
     }
 
     @Override
-    public String changeDirection(){
+    public String changeDirection() {
         return "Bus is turning...";
     }
 
-
+    //Nested Class
     public static class Builder {
         private String make;
         private String model;
@@ -68,21 +65,22 @@ public class Bus extends Vehicle{
             return this;
         }
 
-        public Builder setMake(int doorCount) {
+        public Builder setdoorCount(int doorCount) {
             this.doorCount = doorCount;
             return this;
         }
 
+        //Copy method(Optional) - Copy of a Builder
+        public Builder copy(Bus bus){
+            this.capacity = bus.capacity;
+            this.doorCount = bus.doorCount;
+            return this;
+        }
+
+        //build() method links to constructor
+        public Bus build(){
+            return new Bus(this);
+        }
+
     }
-
-
-
-
-
-
-//    public Bus(String make, String model, String color, int wheels, int capacity, int doorCount){
-//        super();
-//        this.capacity = capacity;
-//        this.doorCount = doorCount;
-//    }
 }
