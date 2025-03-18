@@ -35,7 +35,7 @@ public class TruckRepository implements ITruckRepository {
     }
 
     @Override
-    public boolean create(Truck truck) {
+    public Truck create(Truck truck) {
         Truck newTruck = truckFactory.createTruck(
              truck.getMake()
             ,truck.getModel()
@@ -44,12 +44,12 @@ public class TruckRepository implements ITruckRepository {
             ,truck.getLoadWeightLimit()
             ,truck.getTruckTrailer()
         );
-        return true;
+        return null;
     }
 
     @Override
-    public boolean update(String s) {
-        return true;
+    public Truck update(String s) {
+        return null;
     }
 
     @Override
