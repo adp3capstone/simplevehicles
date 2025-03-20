@@ -4,7 +4,7 @@ import za.ac.cput.domain.Van;
 
 public class VanFactory {
     public Van buildVan(String make,String model,String color,int wheels,double cargoCapacity,boolean hasSlidingDoor ) {
-        if( make==null || model==null || color==null || cargoCapacity <= 0 || hasSlidingDoor ){
+        if( make==null || model==null || color==null || cargoCapacity <= 0 ){
             return null;
         }
 
